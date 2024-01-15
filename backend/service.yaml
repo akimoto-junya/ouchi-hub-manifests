@@ -13,5 +13,3 @@ spec:
   ports:
     - name: backend-port
       port: 80
-      targetPort: 10080
-      protocol: TCP
