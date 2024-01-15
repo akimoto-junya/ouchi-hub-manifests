@@ -9,11 +9,9 @@ metadata:
 spec:
   selector:
     app: backend
-  type: LoadBalancer
+  type: NodePort
   ports:
     - name: backend-port
-      port: 10080
-      targetPort: 80
-      nodePort: 30080
+      port: 80
+      targetPort: 10080
       protocol: TCP
-  externalIPs: ["192.168.10.77"]
