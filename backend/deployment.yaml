@@ -14,7 +14,7 @@ spec:
         app: backend
     spec:
       containers:
-        - name: nginx
-          image: nginx:1.14.2
+        - name: backend
+          image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/backend:2b22612b09af464184d67bc3bf40f314a64b3a64
           ports:
-            - containerPort: 80
+            - containerPort: 8080
