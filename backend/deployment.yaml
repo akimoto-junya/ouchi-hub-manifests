@@ -18,3 +18,5 @@ spec:
           image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/backend:2b22612b09af464184d67bc3bf40f314a64b3a64
           ports:
             - containerPort: 8080
+      imagePullSecrets:
+        - name: ouchi-hub-registry-key
