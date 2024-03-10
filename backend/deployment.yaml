@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-deployment
-  namespace: backend
+  namespace: ouchi-hub-backend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend
+      app: ouchi-hub-backend
   template:
     metadata:
       labels:
-        app: backend
+        app: ouchi-hub-backend
     spec:
       containers:
-        - name: backend
+        - name: ouchi-hub-backend
           image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/backend:22ebae50e33c650cecbfdefd2e62014ce059fc28
           ports:
             - containerPort: 9000
       imagePullSecrets:
-        - name: ouchi-hub-registry-key
+        - name: ouchi-hub-backend-registry-key
