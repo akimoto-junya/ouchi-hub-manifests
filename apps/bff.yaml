@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bff
+  name: ouchi-hub-bff
   namespace: argocd
 spec:
   project: default
