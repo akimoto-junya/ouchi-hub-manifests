@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bff-deployment
-  namespace: bff
+  namespace: ouchi-hub-bff
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: bff
+      app: ouchi-hub-bff
   template:
     metadata:
       labels:
-        app: bff
+        app: ouchi-hub-bff
     spec:
       containers:
-        - name: bff
+        - name: ouchi-hub-bff
           image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/bff:1113031425f99a2f623e0d3ec046c9b875f51cee
           ports:
             - containerPort: 8080
       imagePullSecrets:
-        - name: ouchi-hub-registry-key
+        - name: ouchi-hub-bff-registry-key

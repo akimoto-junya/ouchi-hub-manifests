@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend-service
-  namespace: backend
+  namespace: ouchi-hub-backend
   labels:
     app: backend-app
-    name: backend
+    name: ouchi-hub-backend
 spec:
   selector:
-    app: backend
+    app: ouchi-hub-backend
   type: NodePort
   ports:
     - name: backend-port
