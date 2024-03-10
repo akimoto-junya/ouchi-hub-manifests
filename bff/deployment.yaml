@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: bff
-          image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/bff:76732235b105e1b75ade5e03038c2691b98750bc
+          image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/bff:7c0959d557998739ff6b0ebcde3c6a4fd600e87c
           ports:
             - containerPort: 8080
       imagePullSecrets:
