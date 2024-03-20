@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ouchihub-pvc
+  namespace: ouchi-hub-backend
+  labels:
+    name: ouchi-hub-backend
+spec:
+  storageClassName: "nfs"
+  volumeName: "ouchihub-volume"
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1500Gi
