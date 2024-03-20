@@ -18,5 +18,12 @@ spec:
           image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/backend:22ebae50e33c650cecbfdefd2e62014ce059fc28
           ports:
             - containerPort: 9000
+          volumeMounts:
+            - name: ouchihub-storage
+              mountPath: /data
       imagePullSecrets:
         - name: ouchi-hub-backend-registry-key
+      volumes:
+        - name: ouchihub-storage
+          persistentVolumeClaim:
+            claimName: ouchihub-pvc
