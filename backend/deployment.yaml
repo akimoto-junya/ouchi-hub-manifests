@@ -21,6 +21,9 @@ spec:
           volumeMounts:
             - name: ouchihub-storage
               mountPath: /data
+          envFrom:
+            - configMapRef:
+                name: ouchi-hub-backend-config
       imagePullSecrets:
         - name: ouchi-hub-backend-registry-key
       volumes:
