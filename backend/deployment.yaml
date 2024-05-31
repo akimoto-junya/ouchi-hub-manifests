@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ouchi-hub-backend
-          image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/backend:712f1e7c708e9296734681181f9677dd59dc778d
+          image: asia-northeast1-docker.pkg.dev/ouchihub/ouchi-hub/backend:43b14563a356be5aa1d5bc8ef5d8c5788211dbc4
           ports:
             - containerPort: 9000
           volumeMounts:
